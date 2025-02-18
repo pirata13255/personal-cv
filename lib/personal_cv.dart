@@ -71,14 +71,13 @@ class PersonalCv extends FlameGame
       case JoystickDirection.upLeft:
       case JoystickDirection.left:
       case JoystickDirection.downLeft:
-        player.playerDirection = PlayerDirection.left;
+        player.horizontalMovement = -1;
       case JoystickDirection.upRight:
       case JoystickDirection.right:
       case JoystickDirection.downRight:
-        player.playerDirection = PlayerDirection.right;
+        player.horizontalMovement = 1;
       default:
-        player.playerDirection = PlayerDirection.none;
-
+        player.horizontalMovement = 0;
     }
   }
 }
